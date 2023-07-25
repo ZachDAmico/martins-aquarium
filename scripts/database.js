@@ -56,6 +56,49 @@ const database = {
     },
   ],
 };
+
+const locationsDatabase = {
+  locations: [
+    { id: "Amazon River" },
+    { id: "Seneca Lake" },
+    { id: "Mississippi River" },
+  ],
+};
+
+const quotesDatabase = {
+  quotes: [
+    {
+      id: `"The beauty of the underwater world never ceases to amaze me. Each fish has its own unique personality"`,
+    },
+    {
+      id: `"Aquariums are like living art installations, a glimpse of the wonders of the ocean right in your home."`,
+    },
+  ],
+};
+
+const tipDatabase = {
+  tips: [
+    { id: "Regular water testing" },
+    { id: "Understand your species' requirements" },
+    { id: "Use the right salt mix" },
+    { id: "Gradual adjustments" },
+    { id: "Regular water changes" },
+    { id: "Clean filtration system" },
+    { id: "Remove debris and waste" },
+    { id: "Maintain stable temperature" },
+    { id: "Avoid introducing contaminants" },
+    { id: "Observe your inhabitants" },
+  ],
+};
 export const getFish = () => {
   return database.fish.map((fish) => ({ ...fish }));
+};
+export const getLocation = () => {
+  return locationsDatabase.id.map((location) => ({ ...location }));
+};
+export const getQuote = () => {
+  return quotesDatabase.id.map((quote) => ({ ...quote }));
+};
+export const getTip = () => {
+  return tipDatabase.id.map((tip) => ({ ...tip }));
 };
